@@ -19,5 +19,9 @@ namespace ControleDeLivrosWeb.Controllers
             IEnumerable<Categoria> objCategoriaLista = _db.Categorias.ToList();
             return View(objCategoriaLista);
         }
+        public IActionResult Criar()
+        {
+            return View();
+        }
     }
 }
