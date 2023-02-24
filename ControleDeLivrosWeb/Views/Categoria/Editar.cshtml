@@ -1,13 +1,13 @@
 ﻿
 @model Categoria
 
-<form method="post">
+<form method="post" post-action="Editar">
     <div class="border p-3 mt-4">
         <div class= "row pb-2"
-            <h2 class="text-primary">Criar Categora</h2>
+            <h2 class="text-primary">Editar Categora</h2>
             <hr />
         </div>
-        
+
         <div class="mb-3">
             <label asp-for="Nome"></label>
             <input asp-for="Nome" class="form-control" />
@@ -18,14 +18,14 @@
             <input asp-for="OrdemMostra" class="form-control" />
             <span asp-validation-for="OrdemMostra" class="text-danger"></span>
         </div>
-        <button type="submit" class="btn btn-primary" style="width:150px">Criar</button>
+        <button type="submit" class="btn btn-primary" style="width:150px">Atualizar</button>
         <a asp-controller="Categoria" asp-action="Index" class="btn btn-secondary" style="width:150px">Lista de categorias</a>
     </div>
 </form>
 
 @section Scripts
-{
-    <partial name="_ValidationScriptsPartial" />
+    {
+        <partial name="_ValidationScriptsPartial" />
 
 }
 
