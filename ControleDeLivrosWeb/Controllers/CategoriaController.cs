@@ -38,6 +38,7 @@ namespace ControleDeLivrosWeb.Controllers
             {
                 _db.Categorias.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Categoria criada com sucesso";
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -74,6 +75,7 @@ namespace ControleDeLivrosWeb.Controllers
             {
                 _db.Categorias.Update(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Categoria atualizada com sucesso";
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -108,7 +110,9 @@ namespace ControleDeLivrosWeb.Controllers
             {
                 _db.Categorias.Remove(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Categoria deletada com sucesso";
                 return RedirectToAction("Index");
+
             }
             return View(obj);
         }
